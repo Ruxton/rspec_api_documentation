@@ -7,7 +7,7 @@ module RspecApiDocumentation::DSL
     extend ActiveSupport::Concern
     include Rack::Test::Utils
 
-    delegate :response_headers, :status, :response_status, :response_body, :to => :rspec_api_documentation_client
+    delegate :response_headers, :status, :response_status, :response_body, :response, :to => :rspec_api_documentation_client
 
     module ClassMethods
       def example_request(description, params = {}, &block)
